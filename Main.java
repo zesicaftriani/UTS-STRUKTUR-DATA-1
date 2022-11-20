@@ -1,20 +1,46 @@
 public class Main {
-    public static void main(String[] args) {
-        int [] bil = {43, 4, 33, 60, 13, 6, 59, 220,143
-                , 10, 75, 40,43, 660, 37};
-        System.out.print("Bilangan Genap  :  ");
-        for (int i = 0; i < bil.length; i++){
-            if (bil [i] % 2 == 0) {
-                System.out.print(bil[i] + " ");
+            private Integer id;
+            private String name;
+            private String kelas;
+            private Integer tglMasuk;
+
+            public Main(Integer id, String name, String kelas, Integer tglMasuk) {
+                this.id = id;
+                this.name = name;
+                this.kelas = kelas;
+                this.tglMasuk = tglMasuk;
             }
-        }
-        System.out.println(" ");
-        System.out.print("Bilangan Ganjil :  ");
-        for (int i = 0; i < bil.length; i++){
-            if (bil [i] % 2!= 0){
-                System.out.print(bil[i] + " ");
+
+            public String getName() {
+                return name;
             }
-        }
-        System.out.println("");
-    }
+
+            public void setName(String nameNew) {
+                this.name = nameNew;
+            }
+
+            public String getKelas() {
+                return kelas;
+            }
+
+            public void setKelas(String kelasNew) {
+                this.kelas = kelasNew;
+            }
+
+            public int getId() {
+                return id;
+            }
+
+            public void setId(int idNew) {
+                this.id = idNew;
+            }
+
+            @Override
+     public String toString() {
+                return "Mahasiswa{" +
+                        "id='" + id + '\'' +
+                        ", name='" + name + '\'' +
+                        ", kelas='" + kelas + '\'' +
+                        ", kelas='" + tglMasuk + '\'' + '}';
+            }
 }
